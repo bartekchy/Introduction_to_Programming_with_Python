@@ -2,21 +2,20 @@
 
 def main():
     
-    expresion = input("Expression: ")
-    expresionEl = expresion.split(" ")
+    (first, sign, second) = input("Expression: ").split(" ")
+    first = float(first)
+    second = float(second)
 
-    match expresionEl[1]:
+    match sign:
         case '+':
-            sum = float(expresionEl[0]) + float(expresionEl[2])
-            print(f"{sum:.1f}")
+            result = first + second
         case '-':
-            diff = float(expresionEl[0]) - float(expresionEl[2])
-            print(f"{diff:.1f}")
+            result = first - second
         case '*':
-            prod = float(expresionEl[0]) * float(expresionEl[2])
-            print(f"{prod:.1f}")
+            result = first * second
         case '/':
-            quot = float(expresionEl[0]) / float(expresionEl[2])
-            print(f"{quot:.1f}")
+            result = first / second
+    
+    print(f"{result:.1f}")
             
 main()

@@ -4,7 +4,7 @@ def main():
     
     x = input("Greeting: ").lower()
 
-    if x.startswith("hello"):
+    if x.strip().startswith("hello"):
         print("$0")
     elif x.startswith("h"):
         print("$20")
