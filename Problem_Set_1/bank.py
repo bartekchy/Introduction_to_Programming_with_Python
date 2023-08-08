@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
+
 def main():
-    
     x = input("Greeting: ").lower()
 
     if x.strip().startswith("hello"):
@@ -10,5 +10,6 @@ def main():
         print("$20")
     else:
         print("$100")
+
 
 main()

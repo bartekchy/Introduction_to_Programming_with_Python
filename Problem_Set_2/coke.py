@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def coke():
     cost = 50
 
@@ -21,9 +22,9 @@ def coke():
         else:
             continue
 
+
 def main():
-    
     coke()
-    
+
 
 main()

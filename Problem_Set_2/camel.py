@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-def  separate(expression):
 
-    result=""
+def separate(expression):
+    result = ""
 
     for e in expression:
         if e.isupper():
@@ -12,10 +12,10 @@ def  separate(expression):
 
     return result
 
+
 def main():
-    
     camel_case = input("camelCase: ")
     print("snake_case: " + separate(camel_case))
-    
+
 
 main()
