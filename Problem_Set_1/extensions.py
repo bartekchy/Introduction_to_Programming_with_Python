@@ -4,11 +4,11 @@
 def main():
     filename = input("File name: ")
     substrings = filename.split(".")
-
+    suffix = substrings.pop().lower()
     if len(substrings) == 1:
         print("application/octet-stream")
     else:
-        match substrings.pop().lower():
+        match suffix:
             case "gif":
                 print("image/gif")
             case "jpg":
