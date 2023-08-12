@@ -15,7 +15,7 @@ def separate(expression):
 
 def main():
     camel_case = input("camelCase: ")
-    print("snake_case: " + separate(camel_case))
+    print("snake_case:", separate(camel_case))
 
 
 main()

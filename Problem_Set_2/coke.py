@@ -1,30 +1,23 @@
 #!/usr/bin/env python3
 
-
-def coke():
-    cost = 50
-
-    while True:
-        print("Amount Due:" + str(cost))
-        coin = int(input("Insert Due: "))
-
-        if coin in (5, 10, 25):
-            cost -= coin
-
-            if cost <= 0:
-                print("change Owed: " + str(cost * -1))
-                break
-
-            else:
-                print("change Owed: 0")
-                continue
-
-        else:
-            continue
+COKE_PRICE = 50
+COINS = (5, 10, 25)
 
 
 def main():
-    coke()
+    amount = COKE_PRICE
+
+    while amount > 0:
+        print("Amount Due:", amount)
+        coin = int(input("Insert Coin: "))
+
+        if coin not in COINS:
+            continue
+
+        amount -= coin
+
+    print("Change Owed:", abs(amount))
 
 
-main()
+if __name__ == "__main__":
+    main()

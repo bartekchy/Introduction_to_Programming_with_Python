@@ -5,9 +5,7 @@ def twttr(text):
     result = ""
 
     for t in text:
-        if t in ("A", "a", "E", "e", "I", "i", "O", "o", "U", "u"):
-            continue
-        else:
+        if t not in ("a", "E", "e", "I", "i", "O", "o", "U", "u"):
             result += t
 
     return result

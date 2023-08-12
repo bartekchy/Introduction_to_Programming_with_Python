@@ -21,16 +21,12 @@ def is_string_not_have_correct_form_and_len(s):
 
 
 def is_string_start_with_numbers(s):
-    iterator = 0
+    prefix = ""
 
-    for c in s:
-        iterator += 1
+    for c in s[:2]:
+        prefix += c
 
-        if iterator <= 2 and c.isnumeric():
-            return True
-
-        else:
-            return False
+    return any(char.isdigit() for char in prefix)
 
 
 def is_str_ends_with_numbers(s):
