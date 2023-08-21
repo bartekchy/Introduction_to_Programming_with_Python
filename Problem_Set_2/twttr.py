@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 
+VOWELS = "aeiou"
+
 
 def twttr(text):
     result = ""
 
     for t in text:
-        if t not in ("a", "E", "e", "I", "i", "O", "o", "U", "u"):
+        if t.lower() not in VOWELS:
             result += t
 
     return result
